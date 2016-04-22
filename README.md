@@ -2,6 +2,34 @@
 
 :rocket: Intelligent search made easy
 
+### About this fork ###
+
+The "phrase matches" options was added to original searchkick project's ( https://github.com/ankane/searchkick ) master branch, and it will be  
+available in the version  1.2.2, i couldn't wait for the release so i used the master branch, but, the phrase matches didn't work (for me at least), 
+so i used code from  pluton-house ( https://github.com/pluton-house/searchkick ),  for making the phrase matches work, but unfortunately the pluton-house's project is unmaintained, so it uses deprecated API, which is bad. So, i used some code from pluton-house, and modified the 
+Ankane's project, and my problem was solved.
+
+If you want the "phrase matches" option, and you can't wait for the version 1.2.2 of the searchkick gem, this fork is for you.
+
+if you're already using searchkick, and you want to try this fork, replace 
+
+```ruby
+gem 'searchkick'
+```
+with
+
+```ruby
+gem 'searchkick', git: 'https://github.com/jorge8989/searchkick.git'
+```
+in your Gemfile. and run 
+
+```sh
+bundle update
+```
+if you haven't installed searchkick yet, read 'Get started'.
+
+### About searchkick ###
+
 Searchkick learns what **your users** are looking for.  As more people search, it gets smarter and the results get better.  It’s friendly for developers - and magical for your users.
 
 Searchkick handles:
@@ -41,7 +69,7 @@ elasticsearch
 Add this line to your application’s Gemfile:
 
 ```ruby
-gem 'searchkick'
+gem 'searchkick', git: 'https://github.com/jorge8989/searchkick.git'
 ```
 
 For Elasticsearch 2.0, use the version `1.0` and above. For Elasticsearch 0.90, use version `0.6.3` and [this readme](https://github.com/ankane/searchkick/blob/v0.6.3/README.md).
@@ -1424,15 +1452,15 @@ Thanks to Karel Minarik for [Elasticsearch Ruby](https://github.com/elasticsearc
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ankane/searchkick/issues)
-- Fix bugs and [submit pull requests](https://github.com/ankane/searchkick/pulls)
+- [Report bugs](https://github.com/ankane/jorge8989/issues)
+- Fix bugs and [submit pull requests](https://github.com/jorge8989/searchkick/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development and testing:
 
 ```sh
-git clone https://github.com/ankane/searchkick.git
+git clone https://github.com/jorge8989/searchkick.git
 cd searchkick
 bundle install
 rake test
