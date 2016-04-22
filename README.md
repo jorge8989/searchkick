@@ -245,10 +245,10 @@ Available options are:
 User.search params[:q], fields: [{email: :exact}, :name]
 ```
 
-### Phrase Matches [master]
+### Phrase Matches
 
 ```ruby
-User.search "fresh honey", match: :phrase
+User.search "fresh honey", match_phrase: true
 ```
 
 ### Language
